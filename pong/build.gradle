@@ -1,0 +1,48 @@
+group 'cloud'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext {
+        springBootVersion = '1.2.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'org.springframework:springloaded:1.2.0.RELEASE'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'demo'
+    version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.springframework.cloud:spring-cloud-starter:1.0.2.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-config-client:1.0.2.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka:1.0.2.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-hateoas:1.2.5.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.5.RELEASE'
+    compile 'org.springframework:spring-messaging:4.2.0.RELEASE'
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+task wrapper(type: org.gradle.api.tasks.wrapper.Wrapper) {
+    gradleVersion = '2.5'
+}

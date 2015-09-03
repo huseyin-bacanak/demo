@@ -1,0 +1,51 @@
+group 'cloud'
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+    ext {
+        springBootVersion = '1.2.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath 'org.springframework:springloaded:1.2.0.RELEASE'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'demo'
+    version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+//    compile 'org.springframework.boot:spring-boot-starter-security'
+//    compile("org.springframework.boot:spring-boot-starter-web")
+//    compile("ro.isdc.wro4j:wro4j-extensions:1.7.4")
+//    compile 'org.webjars:jquery:2.1.1'
+//    compile 'org.webjars:angularjs:1.3.8'
+//    compile 'org.webjars:bootstrap:3.2.0'
+//    compile 'org.springframework.cloud:spring-cloud-starter:1.0.3.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server:1.0.2.RELEASE'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka:1.0.2.RELEASE'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+task wrapper(type: org.gradle.api.tasks.wrapper.Wrapper) {
+    gradleVersion = '2.5'
+}

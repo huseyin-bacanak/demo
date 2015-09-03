@@ -1,0 +1,6 @@
+rootProject.name = 'demo'
+include 'eureka'
+include 'monitor'
+include 'ping'
+include 'pong'
+

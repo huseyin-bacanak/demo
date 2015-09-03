@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.netflix.hystrix:hystrix-metrics-event-stream:1.4.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.hystrix/hystrix-metrics-event-stream/1.4.4/f0e702ac1c161f90de234edfffe9b44fbdeba85/hystrix-metrics-event-stream-1.4.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.netflix.hystrix/hystrix-metrics-event-stream/1.4.4/f5ed5fae55604f59e21549e7cf1909194c99695e/hystrix-metrics-event-stream-1.4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
